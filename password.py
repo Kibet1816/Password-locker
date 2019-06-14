@@ -13,7 +13,7 @@ class User:
 
     def save_user(self):
         """
-        Method to save user login details
+        Function to save user login details
         """
         User.user_list.append(self)
 
@@ -32,14 +32,14 @@ class Credentials:
 
     def save_credentials(self):
         """
-        Method to save credentials
+        Function to save credentials
         """
         Credentials.credentials_list.append(self)
 
     @classmethod
     def find_by_name(cls,name):
         """
-        Method that takes a the name of an account and returns the account object
+        Function that takes a the name of an account and returns the account object
         """
         for account in cls.credentials_list:
             if account.account_name == name:
@@ -47,6 +47,6 @@ class Credentials:
 
     def delete_credentials(self):
         """
-        Method to delete account credentials
+        Function to delete account credentials
         """
         Credentials.credentials_list.remove(self)
