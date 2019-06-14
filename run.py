@@ -39,3 +39,13 @@ def del_account(credential):
     Function to delete an account
     """
     credential.delete_credentials()
+
+def main():
+    print("Welcome to password locker :)")
+    print("What\'s your name?")
+    name = input()
+    print(f"Hello {name}. Please sign in to use our services")
+
+
+if __name__ == '__main__':
+    main()
