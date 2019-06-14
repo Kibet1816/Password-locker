@@ -34,3 +34,8 @@ def show_credentials():
     """
     return Credentials.display_credentials
 
+def del_account(credential):
+    """
+    Function to delete an account
+    """
+    credential.delete_credentials()
