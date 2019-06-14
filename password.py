@@ -4,7 +4,10 @@ class User:
     """
 
     def __init__(self,first_name,last_name,password):
-        pass
+
+        self.first_name = first_name
+        self.last_name = last_name
+        self.password = password
 
 
 class Credentials:
@@ -14,4 +17,7 @@ class Credentials:
     credentials_list = []
 
     def __init__(self,account_name,username,password):
-        pass
+        
+        self.account_name = account_name
+        self.username = username
+        self.password = password
