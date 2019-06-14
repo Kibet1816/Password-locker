@@ -16,3 +16,15 @@ def add_account(accname,username,password):
     new_credentials = Credentials(accname,username,password)
     return new_credentials
 
+def save_user(user):
+    """
+    Function to save user login details
+    """
+    user.save_user()
+
+def save_credentials(account):
+    """
+    Function to save account details
+    """
+    account.save_credentials()
+
