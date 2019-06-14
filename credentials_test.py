@@ -41,5 +41,16 @@ class TestCredentials(unittest.TestCase):
         test_credentials.save_credentials()
         self.assertEqual(len(Credentials.credentials_list),2)
 
+    def test_view_credentials(self):
+        """
+        Test to view an account credential
+        """
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Sololearn","Psychocoder","iknowhtml")
+        test_credentials.save_credentials()
+        found_credentials = Credentials.find_by_name("Sololearn")
+        self.assertEqual(found_credentials.password,test_credentials.password)
+
+
 if __name__ == '__main__':
     unittest.main()
