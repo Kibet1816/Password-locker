@@ -51,6 +51,16 @@ class TestCredentials(unittest.TestCase):
         found_credentials = Credentials.find_by_name("Sololearn")
         self.assertEqual(found_credentials.password,test_credentials.password)
 
+    def test_delete_credentials(self):
+        """
+        Test to delete account credentials
+        """
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("AllFootball","Kibet","messithegoat")
+        test_credentials.save_credentials()
+        self.new_credentials.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)
+
 
 if __name__ == '__main__':
     unittest.main()
