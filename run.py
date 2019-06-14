@@ -28,3 +28,9 @@ def save_credentials(account):
     """
     account.save_credentials()
 
+def show_credentials():
+    """
+    Function to display account and credentials
+    """
+    return Credentials.display_credentials
+

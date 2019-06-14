@@ -45,6 +45,13 @@ class Credentials:
             if account.account_name == name:
                 return account
 
+    @classmethod
+    def display_credentials(cls):
+        """
+        Function to display accounts and their credentials
+        """
+        return cls.credentials_list
+
     def delete_credentials(self):
         """
         Function to delete account credentials
