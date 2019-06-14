@@ -8,3 +8,4 @@ class Credentials:
     """
     Class to define credentials for the different accounts
     """
+    credentials_list = []
