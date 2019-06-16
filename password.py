@@ -46,6 +46,18 @@ class Credentials:
                 return account
 
     @classmethod
+    def generate_password(num):
+        """
+        Function to generate password
+        """
+        password = ''
+
+        for x in range(num):
+            x = random.randint(0,99)
+            password += string.printable[x]
+        return password
+
+    @classmethod
     def display_credentials(cls):
         """
         Function to display accounts and their credentials
