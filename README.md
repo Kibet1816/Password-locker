@@ -24,6 +24,8 @@ This program was written by [Denis Kibet](https://github.com/Kibet1816)
 | Options for password input display | User enters `ep` | User can input preferred password |
 | Options for password input display | User keys in `gp` | An 8 character password is generated automatically |
 | Short codes reappear | User keys in `da` | The accounts are displayed by the name,username and password |
+| Short codes displayed | User keys in`lo` | The user logs out of his/her password locker account |
+| Initial short codes appear | User keys in `ex` | User exits the application |
 
 ## Technologies used
 
