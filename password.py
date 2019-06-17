@@ -7,6 +7,9 @@ class User:
     user_list = []
 
     def __init__(self,first_name,last_name,password):
+        """
+        Function to initialize user fields correctly
+        """
 
         self.first_name = first_name
         self.last_name = last_name
@@ -26,6 +29,9 @@ class Credentials:
     credentials_list = []
 
     def __init__(self,account_name,username,password):
+        """
+        Function th initialize credential fields correctly
+        """
 
         self.account_name = account_name
         self.username = username

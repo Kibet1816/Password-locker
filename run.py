@@ -49,13 +49,13 @@ def del_account(credential):
     credential.delete_credentials()
 
 def main():
-    print("Welcome to password locker :)")
-    print("What\'s your name?")
-    name = input()
+    # print("Welcome to password locker :)")
+    # print("What\'s your name?")
+    # name = input()
 
     while True:
 
-        print(f"Hello {name}. Please use the short code :li to login")
+        print(f"Hello.Please use the short code :li to create your password locker account")
     
         short_code = input().lower()
 
@@ -123,9 +123,8 @@ def main():
 
         else:
             print('\n')
-            print('#'*8)
             print("Sorry :( .The command does not exist.Try again with :li")
-            print('#'*8)
+            print('-'*8)
             print('\n')
 
 if __name__ == '__main__':
