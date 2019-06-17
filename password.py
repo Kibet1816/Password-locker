@@ -1,4 +1,5 @@
-import string,random
+import string
+import random
 class User:
     """
     Class to define login details for the user in the application
@@ -46,13 +47,13 @@ class Credentials:
                 return account
 
     @classmethod
-    def generate_password(size=8, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+    def generate_password(stringLength = 10):
         """
         Function to generate password
         """
-        password = ''.join(random.choice(char) for _ in range(size))
-        
-        return password
+        chars = string.ascii_uppercase + string.ascii_lowercase + string.digits
+        size = 8
+        return ''.join(random.choice(chars) for x in range(size,20))
 
     @classmethod
     def display_credentials(cls):

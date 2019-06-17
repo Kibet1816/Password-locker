@@ -91,10 +91,21 @@ def main():
 
                     print('Username.....')
                     username = input()
-                     
-                    print('Password....')
-                    password = input()
-                            
+                    while True:
+                        print('Use: \n ep >> To input your password \n gp >> To generate a password')
+                        pass_code = input().lower()
+
+                        if pass_code == 'ep':
+
+                            print('Password....')
+                            password = input()
+                            break
+
+                        elif pass_code == 'gp':
+                            password = generate_password()
+                            break
+                        else:
+                            pass
 
                     save_credentials(add_account(accname,username,password))
                     print('\n')
