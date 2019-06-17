@@ -16,14 +16,14 @@ This program was written by [Denis Kibet](https://github.com/Kibet1816)
 - Enjoy the application.
 
 ## BDD
-| Input        | Behaviour           | Outcome  |
+| Behaviour        | Input           | Outcome  |
 | ------------- |:-------------:| -----:|
-| Keys in `li` | Application loads | Input fields for the names and password appear |
-| Adds the names and prefered password | User creates an account in password locker | Short commands for navigation appear |
-| Keys in `ca` | Input fields appear | User enters account name and username |
-| Keys in `ep` in password field | Input field for custom password appears | User can input preferred password |
-| Keys in `gp` in password field | Automatic password is generated | Account is created |
-| Keys in `da` | All acounts are loaded | The accounts are displayed by the name,username and password |
+| Short codes display | User keys in `li` | Input fields for the names and password appear |
+| Input fields accept input | User adds his/her name and password | Password locker account is created |
+| Other short codes appear | User keys in `ca` | User enters account name and username |
+| Options for password input display | User enters `ep` | User can input preferred password |
+| Options for password input display | User keys in `gp` | An 8 character password is generated automatically |
+| Short codes reappear | User keys in `da` | The accounts are displayed by the name,username and password |
 
 ## Technologies used
 
