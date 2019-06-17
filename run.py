@@ -22,7 +22,7 @@ def save_user(user):
     """
     user.save_user()
 
-def save_credentials(account):
+def save_credential(account):
     """
     Function to save account details
     """
@@ -40,7 +40,7 @@ def display_credentials():
     """
     Function to display account and credentials
     """
-    return Credentials.credentials_list
+    return Credentials.display_credentials()
 
 def del_account(credential):
     """
@@ -55,7 +55,7 @@ def main():
 
     while True:
 
-        print(f"Hello.Please use the short code :li to create your password locker account")
+        print(f"Hello.Please use the short codes :li to create your password locker account :ex - To exit the application")
     
         short_code = input().lower()
 
@@ -78,7 +78,7 @@ def main():
             
             while True:
 
-                print(f"Welcome {firstname}.Use the following commands: ca-Create a new account :da - Display all accounts :dl - Delete an account ")
+                print(f"Welcome {firstname}.Use the following commands: ca-Create a new account :da - Display all accounts :dl - Delete an account :lo - Log out ")
                 print('\n')
                 shorter_code = input().lower()
 
@@ -104,21 +104,36 @@ def main():
                         elif pass_code == 'gp':
                             password = generate_password()
                             break
+
                         else:
                             pass
 
-                    save_credentials(add_account(accname,username,password))
+                    save_credential(add_account(accname,username,password))
                     print('\n')
-                    print(f'New account \'{accname}\' created')
+                    print(f"New account \'{accname}\' created")
                         
 
                 elif shorter_code == 'da':
                     if display_credentials():
                         for credential in display_credentials():
-                            print(f" Account name >> {credential.account_name}  \n Username >> {credential.username} \n password >> {credential.password} \n")
-                            break
+                            print('-' * 20)
+                            print(f" Account name >> {credential.account_name}  \n Username >> {credential.username} \n password >> {credential.password}")
+                            print('-' * 20)
+                            
                 elif shorter_code == 'dl':
                     pass
+
+                elif shorter_code == 'lo':
+                    print('Thank you for using this app :)')
+                    break
+
+                else:
+                    print('Sorry :( .The command doesn\'t exist.Try again with :li' )
+                    print('-'*8)
+
+        elif short_code == 'ex':
+            print("Hope you enjoyed the application.")
+            break
 
 
         else:
