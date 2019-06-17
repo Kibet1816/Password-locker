@@ -46,15 +46,12 @@ class Credentials:
                 return account
 
     @classmethod
-    def generate_password(num):
+    def generate_password(size=8, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
         """
         Function to generate password
         """
-        password = ''
-
-        for x in range(num):
-            x = random.randint(0,99)
-            password += string.printable[x]
+        password = ''.join(random.choice(char) for _ in range(size))
+        
         return password
 
     @classmethod

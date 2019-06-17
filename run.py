@@ -28,6 +28,14 @@ def save_credentials(account):
     """
     account.save_credentials()
 
+def generate_password():
+    """
+    Function to create a password automatically
+    """
+    password = Credentials.generate_password()
+    return password
+
+
 def display_credentials():
     """
     Function to display account and credentials
@@ -72,7 +80,6 @@ def main():
 
                 print(f"Welcome {firstname}.Use the following commands: ca-Create a new account :da - Display all accounts :dl - Delete an account ")
                 print('\n')
-                print('\n')
                 shorter_code = input().lower()
 
                 if shorter_code == 'ca':
@@ -84,19 +91,21 @@ def main():
 
                     print('Username.....')
                     username = input()
-
-                    print('Password.....')
+                     
+                    print('Password....')
                     password = input()
+                            
 
                     save_credentials(add_account(accname,username,password))
                     print('\n')
-                    print(f'New account \'{accname}\'d created')
+                    print(f'New account \'{accname}\' created')
+                        
 
                 elif shorter_code == 'da':
                     if display_credentials():
                         for credential in display_credentials():
-                            print(f"Account name {credential.account_name}  \n Username >> {credential.username} \n password >> {credential.password}")
-
+                            print(f" Account name >> {credential.account_name}  \n Username >> {credential.username} \n password >> {credential.password} \n")
+                            break
                 elif shorter_code == 'dl':
                     pass
 
